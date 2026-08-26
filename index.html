@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080b10">
+  <meta name="description" content="Verified emergency and public-service helplines across India.">
+  <title>India Emergency Connect</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="site-shell">
+    <header class="topbar">
+      <a class="brand" href="#top" aria-label="India Emergency Connect home"><span class="brand-mark">IEC</span><span>INDIA<br><b>EMERGENCY CONNECT</b></span></a>
+      <div class="status"><span class="status-dot"></span><span>SYSTEM ONLINE</span><span class="status-separator"></span><span>AUG 2026</span></div>
+      <button class="mode-button" id="mode-toggle" type="button" aria-pressed="false"><span aria-hidden="true">◉</span> Emergency mode</button>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow">NATIONAL PUBLIC SERVICE DIRECTORY <span class="eyebrow-line"></span></p>
+          <h1 id="hero-title">INDIA<br><em>EMERGENCY</em><br>CONNECT</h1>
+          <p class="hero-subtitle">Verified emergency &amp; public-service helplines across India.</p>
+          <div class="hero-meta"><span>22 VERIFIED ENTRIES</span><span>01 / 01</span></div>
+        </div>
+        <aside class="primary-emergency" aria-label="National emergency number">
+          <div class="scan-line"></div>
+          <div class="panel-label"><span class="signal"></span> NATIONAL EMERGENCY <span>CRITICAL</span></div>
+          <div class="primary-number">112</div>
+          <p>EMERGENCY RESPONSE<br>SYSTEM</p>
+          <a class="call-primary" href="tel:112"><span aria-hidden="true">↗</span> CALL 112</a>
+          <small>Police · fire · health · other emergency response</small>
+        </aside>
+      </section>
+
+      <section class="notice" aria-label="Emergency guidance"><strong>FOR IMMEDIATE EMERGENCIES / CALL 112</strong><span>112 is India's unified emergency response number. Use the specialized numbers below when appropriate.</span><span>Directory is informational and does not dispatch emergency services.</span></section>
+
+      <section class="directory" aria-labelledby="directory-title">
+        <div class="section-heading"><div><p class="eyebrow">LIVE DIRECTORY / FILTERED VIEW</p><h2 id="directory-title">Find the right line.</h2></div><p class="result-count" id="result-count" aria-live="polite">20 services</p></div>
+        <label class="search-wrap" for="search-input"><span aria-hidden="true">⌕</span><input id="search-input" type="search" placeholder="Search police, ambulance, cyber crime, women, railway..." autocomplete="off"><kbd>/</kbd></label>
+        <div class="filters" id="filters" aria-label="Filter helplines" role="toolbar"></div>
+        <div class="cards" id="helpline-grid" aria-live="polite"></div>
+        <div class="empty-state" id="empty-state" hidden><span>⌁</span><h3>No matching helplines</h3><p>Try another service, number, organization, or category.</p><button type="button" id="clear-search">Clear search</button></div>
+      </section>
+
+      <section class="verification" aria-labelledby="verification-title"><div><p class="eyebrow">DATA INTEGRITY / 08.2026</p><h2 id="verification-title">Use the right number<br>for the right situation.</h2></div><div class="verification-copy"><p>Helpline information can change. Always verify critical information with the relevant government or official service.</p><p class="last-verified">LAST VERIFIED: <strong>AUGUST 2026</strong></p></div></section>
+      <section class="sources" id="sources" aria-labelledby="sources-title"><p class="eyebrow">REFERENCE LEDGER</p><h2 id="sources-title">Sources &amp; verification</h2><div class="source-grid"><a href="https://www.india.gov.in/" target="_blank" rel="noreferrer"><span>01</span> India.gov.in <b>↗</b></a><a href="https://www.mha.gov.in/" target="_blank" rel="noreferrer"><span>02</span> Ministry of Home Affairs <b>↗</b></a><a href="https://cybercrime.gov.in/" target="_blank" rel="noreferrer"><span>03</span> National Cyber Crime Reporting Portal <b>↗</b></a><a href="https://ndrf.gov.in/" target="_blank" rel="noreferrer"><span>04</span> National Disaster Response Force <b>↗</b></a></div><p class="source-note">This directory uses the verified national-level information supplied for this project. Confirm current details with the relevant official service for critical situations.</p></section>
+    </main>
+
+    <footer><div class="footer-brand">INDIA <b>EMERGENCY CONNECT</b></div><p>Built as an educational/public-service web project.</p><p>Emergency information should always be verified with official sources.</p><a href="tel:112">FOR IMMEDIATE EMERGENCIES: CALL 112</a></footer>
+  </div>
+  <dialog id="details-modal" aria-labelledby="modal-title"><div class="modal-inner"><button class="close-modal" id="close-modal" type="button" aria-label="Close details">×</button><p class="eyebrow" id="modal-kicker">SERVICE DETAILS</p><h2 id="modal-title"></h2><div class="modal-number" id="modal-number"></div><dl><div><dt>ORGANIZATION</dt><dd id="modal-org"></dd></div><div><dt>WHAT IT IS FOR</dt><dd id="modal-description"></dd></div><div><dt>AVAILABILITY</dt><dd>Availability should be confirmed with the relevant service.</dd></div><div><dt>IMPORTANT NOTE</dt><dd id="modal-note"></dd></div><div><dt>OFFICIAL SOURCE</dt><dd id="modal-source"></dd></div></dl><a class="modal-call" id="modal-call" href="#"><span aria-hidden="true">↗</span> CALL THIS NUMBER</a></div></dialog>
+  <div class="toast" id="toast" role="status" aria-live="polite">NUMBER COPIED</div>
+  <script src="script.js"></script>
+</body>
+</html>
